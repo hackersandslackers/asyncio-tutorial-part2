@@ -2,28 +2,16 @@
 
 ![Python](https://img.shields.io/badge/Python-v^3.9-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Asyncio](https://img.shields.io/badge/Asyncio-v^3.4.3-blue.svg?longCache=true&logo=python&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Aiohttp](https://img.shields.io/badge/Aiohttp-v^3.7.4-blue.svg?longCache=true&logo=python&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Aiofiles](https://img.shields.io/badge/Aiofiles-v0.7.0-blue.svg?longCache=true&logo=python&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c&logo=GitHub)
-[![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/asyncio-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-blueprint-tutorial/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/asyncio-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-blueprint-tutorial/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/asyncio-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-blueprint-tutorial/network)
+[![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/asyncio-intro-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-blueprint-tutorial/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/asyncio-intro-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-blueprint-tutorial/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/asyncio-intro-tutorial.svg?style=flat-square&colorA=4c566a&logo=GitHub&colorB=ebcb8b)](https://github.com/hackersandslackers/flask-blueprint-tutorial/network)
 
-![Asyncio](https://raw.githubusercontent.com/hackersandslackers/asyncio-tutorial/master/.github/96C20F51-485C-4B54-9FEB-4C0CA5C4ABEC.jpeg)
+![Asyncio](./.github/aiohttp@2x.jpg)
 
-**Source code demonstrating asynchronous Python for the corresponding Hackersandslackers posts.**
-
-### Part I
-
-Introduction to asynchronous Python with Asyncio.
+Source code demonstrating asynchronous Python for the Hackersandslackers post: **Introduction to asynchronous Python with Asyncio:**
 
 https://hackersandslackers.com/python-concurrency-asyncio/
-
-### Part II
-
-Make asynchronous HTTP requests and write to disk using [**asyncio**](https://docs.python.org/3/library/asyncio.html), [**aiohttp**](https://docs.aiohttp.org/en/stable/), & [**aiofiles**](https://github.com/Tinche/aiofiles).
-
-https://hackersandslackers.com/async-requests-with-aiohttp/
 
 
 ## Getting Started
@@ -31,8 +19,8 @@ https://hackersandslackers.com/async-requests-with-aiohttp/
 Get up and running by cloning this repository and running `make deploy`:
 
 ```shell
-$ git clone https://github.com/hackersandslackers/asyncio-tutorial.git
-$ cd asyncio-tutorial
+$ git clone https://github.com/hackersandslackers/asyncio-intro-tutorial.git
+$ cd asyncio-intro-tutorial
 $ make deploy
 ``` 
 

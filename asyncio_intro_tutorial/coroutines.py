@@ -1,7 +1,7 @@
 """Create a coroutine function to be executed as asyncio task."""
 import asyncio
 
-from asyncio_tutorial.logger import LOGGER
+from logger import LOGGER
 
 
 async def simple_coroutine(number: int, delay=1):

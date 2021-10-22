@@ -6,7 +6,7 @@ define HELP
 Manage $(PROJECT_NAME). Usage:
 
 make run        - Run $(PROJECT_NAME).
-make install    - Create virtual env, install dependencies, and run project.
+make install    - Create virtual environment & install dependencies.
 make deploy     - Install and run script by running `make install` and `make run` in succession.
 make update     - Update pip dependencies via Poetry and export output to requirements.txt.
 make format     - Format code with Python's `Black` library.
@@ -18,12 +18,7 @@ export HELP
 
 .PHONY: run install deploy update format lint clean help
 
-requirements: .requirements.txt
 env: ./.venv/bin/activate
-
-
-.requirements.txt: requirements.txt
-	$(shell . .venv/bin/activate && pip install -r requirements.txt)
 
 
 all help:
@@ -38,7 +33,7 @@ run: env
 .PHONY: install
 install:
 	if [ ! -d "./.venv" ]; then python3 -m venv $(VIRTUAL_ENVIRONMENT); fi
-	. .venv/bin/activate
+	$(shell . .venv/bin/activate)
 	$(LOCAL_PYTHON) -m pip install --upgrade pip setuptools wheel
 	$(LOCAL_PYTHON) -m pip install -r requirements.txt
 

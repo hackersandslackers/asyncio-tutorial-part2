@@ -1,8 +1,8 @@
-"""Execute an action upon loop completion with Futures."""
+"""Schedule a message to be logged upon completion of all tasks in an event loop."""
 import asyncio
 from asyncio import Future
 
-from asyncio_tutorial.logger import LOGGER
+from logger import LOGGER
 
 
 def register_future() -> Future:
@@ -19,7 +19,7 @@ def register_future() -> Future:
 
 def loop_completed(result: str):
     """
-    Callback to be executed when loop is complete.
+    Log a message when all tasks are completed.
 
     :param str result: Result of the loop & its execution time.
     """

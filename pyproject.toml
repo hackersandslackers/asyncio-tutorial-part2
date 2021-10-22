@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "asyncio_tutorial"
+name = "asyncio_intro_tutorial"
 version = "0.1.0"
 description = "Execute tasks asynchronously in Python using Asyncio."
 authors = ["Todd Birchard <todd@hackersandslackers.com>"]
@@ -8,23 +8,18 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/hackersandslackers/asyncio-tutorial/"
 repository = "https://github.com/hackersandslackers/asyncio-tutorial/"
-documentation = "https://hackersandslackers.com/async-requests-with-aiohttp/"
+documentation = "https://hackersandslackers.com/asyncio-python-concurrency/"
 keywords = [
   "Asyncio",
-  "Aiohttp",
-  "Aiofiles",
   "Asynchronous",
-  "I/O"
+  "I/O",
+  "Concurrency",
+  "Python"
 ]
 
 [tool.poetry.dependencies]
 python ="^3.9"
-aiohttp = "*"
 asyncio = "*"
-aiofiles = "*"
-aiodns = "^3.0.0"
-cchardet = "^2.1.7"
-brotlipy = "^0.7.0"
 loguru = "*"
 
 [tool.poetry.dev-dependencies]
@@ -46,4 +41,4 @@ build-backend = "poetry.masonry.api"
 
 [tool.isort]
 profile = "black"
-src_paths = ["asyncio_tutorial", "data", "main", "config"]
+src_paths = ["asyncio_tutorial_part1", "main", "config"]
