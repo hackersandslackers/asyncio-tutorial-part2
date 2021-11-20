@@ -12,4 +12,4 @@ async def simple_coroutine(number: int, delay=1):
     :param int delay: Time delay to simulate function delay.
     """
     await asyncio.sleep(delay)
-    LOGGER.info(f"This is Coroutine {number} being executed.")
+    LOGGER.info(f"Coroutine {number} has finished executing.")

@@ -1,31 +1,41 @@
-"""Create and execute asynchronous tasks in a loop."""
 import asyncio
+import inspect
 import time
 
 from logger import LOGGER
 
-from .coroutines import simple_coroutine
-from .futures import register_future
-from .loops import inspect_event_loop
-from .tasks import create_tasks
+from asyncio_intro_tutorial.coroutines import simple_coroutine
+from asyncio_intro_tutorial.tasks import create_tasks
 
 
-async def init_script(start_time: float):
-    """
-    Demo of an asynchronous script's lifecycle.
+async def init_script(start_time):
+    await async_gather_example(start_time)
+    await async_tasks_example(start_time)
 
-    :param float start_time: Counter representing the time the script was initialized.
-    """
-    LOGGER.info(f"Asyncio tutorial Part I: Intro to Asyncio.")
-    future = register_future()
-    await create_and_execute_tasks()
-    future.set_result(
-        f"Executed {__name__} in {time.perf_counter() - start_time:0.2f} seconds."
+
+async def async_gather_example(start_time):
+    await asyncio.gather(
+        simple_coroutine(1),
+        simple_coroutine(2),
+        simple_coroutine(3),
     )
+    LOGGER.info(
+        f"Executed {inspect.currentframe().f_code.co_name} in {time.perf_counter() - start_time:0.2f} seconds."
+    )
+    LOGGER.info("------------------------------------------------")
 
 
-async def create_and_execute_tasks():
-    """Creates tasks and executes them in an event loop."""
-    task_list = await create_tasks(simple_coroutine)
-    inspect_event_loop()
-    await asyncio.gather(*task_list)
+async def async_tasks_example(start_time):
+    LOGGER.info(
+        f"Executing function {inspect.currentframe().f_code.co_name} momentarily..."
+    )
+    time.sleep(2)
+    tasks = await create_tasks(simple_coroutine)
+    LOGGER.info(f"Tasks about to be executed:")
+    for task in tasks:
+        LOGGER.info(task)
+    tasks = await asyncio.gather(*tasks)
+    LOGGER.info(f"Remaining tasks: {tasks}")
+    LOGGER.info(
+        f"Executed {inspect.currentframe().f_code.co_name} in {time.perf_counter() - start_time:0.2f} seconds."
+    )
